@@ -1,12 +1,85 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
-    
-    <FrameLayout 
+    android:layout_height="match_parent" >
+
+    <FrameLayout
         android:id="@+id/lay_main_fragement"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_menu_layer" >
+            
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ic_launcher" />
+            
+            <Button 
+                android:id="@+id/btn_main_menuList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/select_main_menu_list"/>
+            
+            <Button 
+                android:id="@+id/btn_main_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/btn_main_menuList"
+                android:background="@drawable/selector_main_chat"/>
+            
+        </RelativeLayout>
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/shape_menu_layer">
+        
+            <Button
+                android:id="@+id/btn_main_friendList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/select_main_friend_list"/>
+            
+            <Button 
+                android:id="@+id/btn_main_chatUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_main_chat_user"/>
+            
+            <Button 
+                android:id="@+id/btn_main_friendSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_main_friend_search"/>
+            
+        </LinearLayout>
+        
+        <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent">
+            
+            
+            
+        </RelativeLayout>
+        
+    </LinearLayout>
 
-</LinearLayout>
+</FrameLayout>
