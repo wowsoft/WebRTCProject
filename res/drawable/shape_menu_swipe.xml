@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="8dp" />
+		    <padding
+		        android:left="5dp"
+		        android:top="5dp"
+		        android:right="5dp"
+		        android:bottom="5dp" />
+		    <solid android:color="#87000000" />
+        </shape>
+    </item>
+    <item>
+        <bitmap android:src="@drawable/ic_reply_white_48dp" android:gravity="fill"/>
+    </item>
+
+</layer-list>

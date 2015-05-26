@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <layer-list>
+            <item>
+                <shape android:shape="ring"
+                    android:innerRadiusRatio="3"
+    				android:useLevel="false">
+    				<gradient android:type="sweep"
+    				    android:startColor="#3fb7ff"
+    				    android:centerColor="#000000"
+    				    android:endColor="#3fb7ff"
+    				    android:centerX="1"
+    				    android:centerY="1"/>
+                </shape>
+            </item>
+            <item>
+                <bitmap android:src="@drawable/ic_warning_white_36dp" android:gravity="center"/>
+            </item>
+        </layer-list>
+    </item>
+
+</selector>
