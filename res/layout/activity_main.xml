@@ -8,153 +8,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
     
-    <LinearLayout
+    <FrameLayout 
+        android:id="@+id/lay_main_menu_fragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical" >
-        
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/shape_menu_layer" >
-            
-            <Button 
-                android:id="@+id/btn_main_menuList"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_alignParentRight="true"
-                android:background="@drawable/select_main_menu_list"/>
-            
-            <Button 
-                android:id="@+id/btn_main_chat"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_toLeftOf="@id/btn_main_menuList"
-                android:background="@drawable/selector_main_chat"/>
-            
-        </RelativeLayout>
-        
-        <LinearLayout 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@drawable/shape_menu_layer">
-        
-            <Button
-                android:id="@+id/btn_main_friendList"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/select_main_friend_list"/>
-            
-            <Button 
-                android:id="@+id/btn_main_chatUser"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:background="@drawable/selector_main_chat_user"/>
-            
-            <Button 
-                android:id="@+id/btn_main_friendSearch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:background="@drawable/selector_main_friend_search"/>
-            
-        </LinearLayout>
-        
-        <RelativeLayout 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent">
-            
-            <Button 
-                android:id="@+id/btn_main_declaration"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:background="@drawable/selector_menu_declareation"/>
-            
-            <Button 
-               android:id="@+id/btn_main_keyboard"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_below="@id/btn_main_declaration"
-               android:background="@drawable/selector_menu_keyboard" />
-            
-            <Button 
-                android:id="@+id/btn_main_sound"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/btn_main_keyboard"
-                android:background="@drawable/selector_menu_sound"/>
-            
-            <Button 
-                android:id="@+id/btn_main_filter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:background="@drawable/selector_menu_filter"/>
-            
-            <Button 
-                android:id="@+id/btn_main_emotion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@id/btn_main_filter"
-                android:background="@drawable/selector_menu_emotion"/>
-            
-            <Button 
-                android:id="@+id/btn_main_cart"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:background="@drawable/selector_menu_cart"/>
-            
-            <Button 
-                android:id="@+id/btn_main_camera"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toLeftOf="@id/btn_main_cart"
-                android:layout_alignParentBottom="true"
-                android:background="@drawable/selector_menu_camera"/>
-            
-            <Button 
-                android:id="@+id/btn_main_stop"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_toLeftOf="@id/btn_main_camera"
-                android:background="@drawable/selector_menu_stop"/>
-            
-            <Button 
-                android:id="@+id/btn_main_start"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_above="@id/btn_main_cart"
-                android:background="@drawable/selector_menu_start"/>
-            
-            <Button 
-                android:id="@+id/btn_main_location"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_above="@id/btn_main_start"
-                android:background="@drawable/selector_menu_location"/>
-            
-            <Button 
-                android:id="@+id/btn_main_sex"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_above="@id/btn_main_location"
-                android:background="@drawable/selector_menu_sex"/>
-        </RelativeLayout>
-        
-    </LinearLayout>
+        android:layout_height="match_parent" />
     
     <LinearLayout
         android:layout_width="match_parent"
@@ -163,6 +20,7 @@
         android:orientation="vertical" >
 
         <ImageView 
+            android:id="@+id/img_main_swipe"
             android:layout_width="120dp"
             android:layout_height="60dp"
             android:clickable="true"
