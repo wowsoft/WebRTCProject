@@ -86,7 +86,8 @@
             android:layout_height="120dp"
             android:layout_marginLeft="15dp"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentBottom="true"></FrameLayout>
+            android:layout_alignParentBottom="true"
+            android:background="#000000"></FrameLayout>
 
         <Button
             android:id="@+id/btn_main_filter"

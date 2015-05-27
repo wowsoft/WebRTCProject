@@ -4,26 +4,30 @@ import java.io.IOException;
 
 import kr.co.wowsoft.R;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.media.MediaPlayer;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
 public class VideoPreview extends SurfaceView implements SurfaceHolder.Callback {
 
-	private SurfaceHolder mHolder;
-	private MediaPlayer mMediaPlayer;
-	private Context mContext;
-	
-	public VideoPreview(Context context, MediaPlayer media) {
+	public VideoPreview(Context context) {
 		super(context);
-		
-		this.mContext = context;
-		this.mMediaPlayer = media;
-		
-		mHolder = getHolder();
-		mHolder.addCallback(this);
-		mHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
+		getHolder().addCallback(this);
+	}
+	
+	@Override
+	protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+        Bitmap icon = BitmapFactory.decodeResource(getResources(),R.drawable.bg);
+        canvas.drawColor(Color.BLACK);
+        canvas.drawBitmap(icon, 10, 10, new Paint());
 	}
 
 	@Override
@@ -31,17 +35,21 @@ public class VideoPreview extends SurfaceView implements SurfaceHolder.Callback 
 		
 	}
 
-	@Override
+	@SuppressLint("WrongCall") @Override
 	public void surfaceCreated(SurfaceHolder holder) {
-		mMediaPlayer.setDisplay(mHolder);
-		try {
-			mMediaPlayer.setDataSource("android.resource://kr.co.wowsoft/" + R.raw.sample_mpeg4);
-			mMediaPlayer.prepare();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		mMediaPlayer.start();
+		Canvas canvas = null;
+        try {
+            canvas = holder.lockCanvas(null);
+            synchronized (holder) {
+                onDraw(canvas);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (canvas != null) {
+                holder.unlockCanvasAndPost(canvas);
+            }
+        }
 	}
 
 	@Override

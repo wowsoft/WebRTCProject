@@ -81,6 +81,7 @@ public class MainMenuFragment extends Fragment {
 	    				.getDefaultDisplay()
 	    				.getRotation();
 	        	mPreview = new CameraPreview(getActivity(), mCamera, mCameraId, mRotation);
+	        	mPreview.setZOrderMediaOverlay(true);
 	        	mLayMySurface.addView(mPreview);
 	        }
 	    
