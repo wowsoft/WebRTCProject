@@ -4,5 +4,8 @@
     <string name="app_name">WebRTC</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="email_register"><u>이메일로 가입하기</u></string>
+    <string name="terms"><u>약관</u></string>
+    <string name="privacy"><u>개인정보보호정책</u></string>
 
 </resources>

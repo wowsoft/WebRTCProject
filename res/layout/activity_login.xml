@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/img_login" >
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight="1">
+        
+         <Button 
+	        android:id="@+id/btn_login_fb_login"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="17sp"
+	        android:textColor="#ffffff"
+	        android:textStyle="bold"
+	        android:text="페이스북으로 가입하기"
+	        android:paddingLeft="50dp"
+	        android:background="@drawable/fb_logo_blue"
+	        android:layout_marginTop="10dp"/>
+    
+    	<Button 
+	        android:id="@+id/btn_login_kakao_login"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="17sp"
+	        android:textColor="#ffffff"
+	        android:textStyle="bold"
+	        android:text="카카오계정으로 가입하기"
+	        android:paddingLeft="50dp"
+	        android:background="@drawable/kakao_logo_yellow"
+	        android:layout_marginTop="10dp"/>
+    	
+    	<TextView 
+    	    android:id="@+id/txt_login_email_register"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:textSize="17sp"
+    	    android:textColor="#ffffff"
+    	    android:textStyle="bold"
+    	    android:text="@string/email_register"
+    	    android:clickable="true"
+    	    android:layout_marginTop="40dp"/>
+        
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:orientation="vertical">
+        <Button 
+            android:id="@+id/btn_login_sm_login"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="로그인"
+            android:background="@drawable/selector_login_sm_login"/>
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp">
+         	<TextView
+         	    android:id="@+id/btn_login_terms"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:textColor="#09376a"
+            	android:textSize="11sp"
+            	android:clickable="true"
+            	android:text="@string/terms"/>
+         	<TextView 
+         	    android:layout_width="wrap_content"
+         	    android:layout_height="wrap_content"
+         	    android:textColor="#ffffff"
+         	    android:textSize="11sp"
+         	    android:text="및"/>
+         	<TextView 
+         	    android:id="@+id/btn_login_privacy"
+         	    android:layout_width="wrap_content"
+         	    android:layout_height="wrap_content"
+         	    android:textColor="#09376a"
+         	    android:textSize="11sp"
+         	    android:clickable="true"
+         	    android:text="@string/privacy"/>
+         	<TextView 
+         	    android:layout_width="wrap_content"
+         	    android:layout_height="wrap_content"
+         	    android:textColor="#ffffff"
+         	    android:textSize="11sp"
+         	    android:text="에 동의하시면 가입버튼을 누르세요"/>
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

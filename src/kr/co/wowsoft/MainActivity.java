@@ -24,9 +24,7 @@ public class MainActivity extends FragmentActivity {
 	private GestureDetector mGesture;
 	private boolean mDoubleBackToExitPressedOnce;
 	private Handler mHandler = new Handler();
-	
 
-	
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);        
